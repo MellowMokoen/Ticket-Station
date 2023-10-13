@@ -290,6 +290,10 @@ address {
   line-height: inherit;
 }
 
+.display-4 {
+  color: rgb(201, 28, 28);
+}
+
 .event-name {
   font-size: larger;
   color: #00588b;
