@@ -290,6 +290,17 @@ address {
   line-height: inherit;
 }
 
+.display-4 {
+  color: rgb(201, 28, 28);
+}
+
+.event-name {
+  font-size: larger;
+  color: #00588b;
+  opacity: 3;
+  font-weight: bold;
+}
+
 ol,
 ul {
   padding-left: 2rem;
@@ -307,6 +318,17 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+}
+
+ul .new-menu  {
+  list-style: none;
+  color: white;
+  margin: 30px;
+  font-size: large;
+}
+
+.new-menu a {
+  color: #008cdd;
 }
 
 dt {
