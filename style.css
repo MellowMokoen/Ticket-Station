@@ -320,11 +320,15 @@ ul ol {
   margin-bottom: 0;
 }
 
-ul .new-menu {
+ul .new-menu  {
   list-style: none;
   color: white;
   margin: 30px;
   font-size: large;
+}
+
+.new-menu a {
+  color: #008cdd;
 }
 
 dt {
