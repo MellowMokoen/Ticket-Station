@@ -309,6 +309,13 @@ ul ol {
   margin-bottom: 0;
 }
 
+ul .new-menu {
+  list-style: none;
+  color: white;
+  margin: 30px;
+  font-size: large;
+}
+
 dt {
   font-weight: 700;
 }
