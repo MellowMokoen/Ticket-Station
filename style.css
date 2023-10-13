@@ -290,6 +290,13 @@ address {
   line-height: inherit;
 }
 
+.event-name {
+  font-size: larger;
+  color: #00588b;
+  opacity: 3;
+  font-weight: bold;
+}
+
 ol,
 ul {
   padding-left: 2rem;
