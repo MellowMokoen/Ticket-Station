@@ -14,18 +14,47 @@
     background-size: cover;
     position: relative;
 }
+
+.container::before{
+    content: '';
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+}
 .form-container{
     position: absolute;
     max-width: 320px;
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.2);
     z-index: 101;
     background: #fff;
     padding: 25px;
     border-radius: 12px;
     box-shadow: rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+}
+.form-container.active .signup-form{
+    display: block;
+}
+.form-container.active .login-form{
+    display: none;
+}
+.container .form-container{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.signup-form{
+    display: none;
 }
 .form-close{
     position: absolute;
@@ -72,7 +101,7 @@
 }
 .input-box input:focus ~ i.email,
 .input-box input:focus ~ i.password{
-    color: #7d2ae8;
+    color: #00588b;
 }
 .input-box i.pw-hide{
     right: 0;
@@ -86,7 +115,7 @@
     justify-content: space-between;
 }
 .form-container a{
-    color: #7d2ae8;
+    color: #00588b;
     font-size: 12px;
 }
 .form-container a:hover{
@@ -100,7 +129,7 @@
     cursor: pointer;
 }
 .checkbox input{
-    accent-color: #7d2ae8;
+    accent-color: #00588b;
 }
 .checkbox label{
     color: #0b0217;
@@ -109,7 +138,7 @@
     cursor: pointer;
 }
 .form-container .button{
-    background: #7d2ae8;
+    background: #00588b;
     margin-top: 30px;
     width: 100%;
     padding: 10px 0;
@@ -121,84 +150,3 @@
     text-align: center;
     margin-top: 15px;
 }
-/*
-.form-box{
-    width: 90%;
-    max-width: 450px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: #fff;
-    padding: 50px 60px 70px;
-    text-align: center;
-}
-.form-box h2{
-    font-size: 30px;
-    margin-bottom: 60px;
-    color: #3c00a0;
-    position: relative;
-}
-.form-box h2::after{
-    content: '';
-    width: 30px;
-    height: 4px;
-    border-radius: 3px;
-    background: #3c00a0;
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.input-field{
-    background: #eaeaea;
-    margin: 15px 0;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    max-height: 65px;
-    transition: max-height 0.5s;
-    overflow: hidden;
-}
-input{
-    width: 100%;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 18px 15px;
-}
-.input-field i{
-    margin-left: 15px;
-    color: #999;
-}
-form p{
-    text-align: left;
-    font-size: 13px;
-}
-form p a{
-    text-decoration: none;
-    color: #3c00a0;
-}
-.btn-field{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.btn-field button{
-    flex-basis: 48%;
-    background: #3c00a0;
-    color: #fff;
-    height: 40px;
-    border-radius: 20px;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    transition: background 1s;
-}
-.input-group{
-    height: 280px;
-}
-.btn-field button.disable{
-    background: #eaeaea;
-    color: #555;
-}*/
