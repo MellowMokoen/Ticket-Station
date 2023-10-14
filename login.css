@@ -34,7 +34,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1.2);
     z-index: 101;
-    background: #fff;
+    background: dodgerblue;
     padding: 25px;
     border-radius: 12px;
     box-shadow: rgba(0,0,0,0.1);
@@ -82,7 +82,7 @@
     border: none;
     outline: none;
     padding: 0 30px;
-    color: #333;
+    color: dodgerblue;
     transition: all 0.2s ease;
     border-bottom: 1.5px solid #aaaaaa;
 }
