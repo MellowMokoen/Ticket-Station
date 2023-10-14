@@ -45,6 +45,16 @@
 
         siginBtn.onclick = function(){
             nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            siginBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function(){
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            siginBtn.classList.add("disable");
         }
     </script>
 </body>
