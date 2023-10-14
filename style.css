@@ -287,6 +287,10 @@ address {
   line-height: inherit;
 }
 
+.display-2 {
+  opacity: 0.8;
+}
+
 .display-4 {
   color:#008cdd;
 }
