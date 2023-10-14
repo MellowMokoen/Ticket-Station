@@ -319,13 +319,17 @@ ul ol {
 
 ul .new-menu  {
   list-style: none;
-  color: white;
   margin: 30px;
   font-size: large;
 }
 
 .new-menu a {
   color: #008cdd;
+  font-weight: bold;
+  border: 2px solid #0079bf;
+  padding: 10px;
+  border-radius: 5px 10px;
+  box-shadow: 4px 3px #00aff0;
 }
 
 dt {

@@ -53,6 +53,7 @@ body,
 	height: 100%;
 	z-index: -1;
 	border: 2px solid #FFF;
+	border-radius: 4px 4px;
 	-webkit-transform: translate(3px, 3px);
 	transform: translate(3px, 3px);
 	-webkit-transition: -webkit-transform .15s ease-out;
