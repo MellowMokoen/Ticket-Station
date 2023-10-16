@@ -302,6 +302,17 @@ address {
   font-weight: bold;
 }
 
+.contact-btn {
+    color: #008cdd;
+    font-size: larger;
+    font-weight: bold;
+    border: 2px solid #0079bf;
+    padding: 10px;
+    border-radius: 5px 10px;
+    box-shadow: 4px 3px #00aff0;
+
+}
+
 ol,
 ul {
   padding-left: 2rem;

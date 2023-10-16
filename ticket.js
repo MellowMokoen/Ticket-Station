@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function () {
         // Ticket Price Changed Script
         var elementEarlyBird = jQuery("#early-bird-person"),
@@ -25,3 +26,14 @@ jQuery(document).ready(function () {
           jQuery(".full-pricing").html("$" + pricingFull * 69);
         });
       });
+    
+      /*
+      <div
+            class="dotted-bg"
+            style="
+              background: url('demos/conference/images/businessman.jpg') repeat
+                center center / contain;
+              min-height: 75%;
+            "
+          ></div>
+          */
