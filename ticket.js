@@ -1,39 +1,27 @@
-
-jQuery(document).ready(function () {
-        // Ticket Price Changed Script
-        var elementEarlyBird = jQuery("#early-bird-person"),
-          element1Day = jQuery("#1-day-pricing-person"),
-          element2Day = jQuery("#2-day-pricing-person"),
-          elementFull = jQuery("#full-pricing-person");
-
-        elementEarlyBird.on("change", function () {
-          pricingEarlyBird = jQuery(this).prop("value");
-          jQuery(".early-bird-pricing").html("$" + pricingEarlyBird * 39);
-        });
-
-        element1Day.on("change", function () {
-          pricing1day = jQuery(this).prop("value");
-          jQuery(".1-day-pricing").html("$" + pricing1day * 29);
-        });
-
-        element2Day.on("change", function () {
-          pricing2Day = jQuery(this).prop("value");
-          jQuery(".2-day-pricing").html("$" + pricing2Day * 49);
-        });
-
-        elementFull.on("change", function () {
-          pricingFull = jQuery(this).prop("value");
-          jQuery(".full-pricing").html("$" + pricingFull * 69);
-        });
-      });
+ // Function to update the ticket price based on the selected number of people
+  function updatePrice(selectElement, priceElement, basePrice) {
+    const selectedValue = parseInt(selectElement.value);
+    const priceUnit = priceElement.querySelector('.price-unit').textContent;
     
-      /*
-      <div
-            class="dotted-bg"
-            style="
-              background: url('demos/conference/images/businessman.jpg') repeat
-                center center / contain;
-              min-height: 75%;
-            "
-          ></div>
-          */
+    // Update the price element with the new price
+    if (selectedValue === 1) {
+      priceElement.textContent = `${priceUnit}${basePrice}`;
+    } else if (selectedValue >= 2) {
+      // Calculate the new price by multiplying the base price by the selected number of people
+      const price = selectedValue * basePrice;
+      priceElement.textContent = `${priceUnit}${price}`;
+    } 
+    
+  }
+
+  // Add event listeners to each select element
+  const selectElements = document.querySelectorAll('.pricing-persons select');
+  const priceElements = document.querySelectorAll('.pricing-price');
+  const basePrices = [0, 450, 280, 600];
+  
+  for (let i = 0; i < selectElements.length; i++) {
+    selectElements[i].addEventListener('change', () => {
+      updatePrice(selectElements[i], priceElements[i], basePrices[i]);
+    });
+  }
+
