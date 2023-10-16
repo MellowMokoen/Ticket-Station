@@ -81,7 +81,7 @@
     width: 100%;
     border: none;
     outline: none;
-    padding: 0 30px;
+    padding: 0 38px;
     color: dodgerblue;
     transition: all 0.2s ease;
     border-bottom: 1.5px solid #aaaaaa;
@@ -96,7 +96,7 @@
     font-size: 20px;
 }
 .input-box i.email, .input-box i.password{
-    left: 0;
+    left: 7px;
     color: #707070;
 }
 .input-box input:focus ~ i.email,
