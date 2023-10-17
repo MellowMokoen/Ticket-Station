@@ -88,3 +88,16 @@ body{
     justify-content: center;
     align-items: center;
 }
+.right{
+    width: 25%;
+}
+.right p{
+    padding: 30px 20px;
+    font-weight: bold;
+}
+.right a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
