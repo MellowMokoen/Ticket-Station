@@ -6,4 +6,12 @@ iconB = document.querySelector('.fa-building-columns'),
 iconC = document.querySelector('.fa-credit-wallet'), 
 cDetails = document.querySelector('.card-details');
 
-
+function methodA(){
+    tColorA.style.color = "greenyellow";
+    tColorB.style.color = "#444";
+    tColorC.style.color = '#444';
+    iconA.style.color = "greenyellow"
+    iconB.style.color =  "#aaa";;
+    iconC.style.color = "#aaa";
+    cDetails.style.display = "block";
+}
