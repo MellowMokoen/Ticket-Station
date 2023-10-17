@@ -13,6 +13,7 @@
     ></script>
 </head>
 <body>
+    
     <div class="container">
         <div class="left">
             <p>Payment methods</p>
@@ -21,7 +22,7 @@
                 <div onclick="methodA()" id="tColorA" style="color: greenyellow;"><i class="fa-solid fa-credit-card" style="color: greenyellow;"></i>Payment by card</div>
             </div>
             <div onclick="methodB()" id="tColorB"><i class="fa-solid fa-building-columns"></i>Internet banks</div>
-            <div onclick="methodC()" id="tColorC"><i class="fa-solid fa-wallet"></i>Apple Google Pay</div>
+            <div onclick="methodC()" id="tColorC"><i class="fa-solid fa-wallet"></i>Apple/Google Pay</div>
             <hr style="border: 1px solid #ccc; margin: 0 15px;">
         </div>
     </div>
@@ -29,6 +30,7 @@
         <a href="https://www.shift4shop.com/credit-card-logos.html">
             <img alt="Credit Card Logos" src="demos/business/images/credit-card.png">
         </a>
+        <hr style="border:1px solid #ccc; margin: 0 15px;">
         <div class="card-details">
             <form>
                 <p>Card number</p>
@@ -42,9 +44,10 @@
                         <input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
                     </div>
                     <div>
-                        <p>CW</p>
-                        <div class="cvv-box" class="cc-cvv" aria-placeholder="CVV" required maxlength="3" required>
-                            <i class="fa-solid fa-circle-question" title="3 digits on the back of the card"></i>
+                        <p>CVV</p>
+                        <div class="cvv-box" id="cvv-box"> 
+                            <input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3" required>
+                            <i class="fa-solid fa-circle-question" title="3 digits on the back of the card" style="cursor: pointer;"></i>
 
                         </div>
                     </div>
@@ -60,12 +63,13 @@
     <div class="right">
         <p>Order Information</p>
         <hr style="border: 1px solid #ccc; margin: 0 15px;">
-    </div>
-    <div class="details">
-        <div class="description">Order description</div>
-        <div class="test">Test payment</div>
-        <hr style="border: 1px solid #ccc; margin: 0 15px;">
-        <a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="demos/business/images/credit-card.png"></a>
+    
+        <div class="details">
+            <div style="font-weight: bold; padding: 3px 0;">Order description</div>
+            <div style="padding: 3px 0;">Test payment</div>
+            <hr style="border: 1px solid #ccc; margin: 0 15px;">
+            <a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="demos/business/images/credit-card.png"></a>
+        </div>
     </div>
     <!--Link to JS-->
     <script src="checkout.js"></script>

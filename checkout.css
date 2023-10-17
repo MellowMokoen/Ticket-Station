@@ -10,12 +10,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--bs-body-bg);
 }
 .container{
     display: flex;
     width: 67%;
     border: 1px solid #ccc;
     border-radius: 7px;
+    
 }
 .left{
     width: 25%;
@@ -50,27 +52,19 @@ body{
 .center img{
     width: 250px;
     height: auto;
-    margin: 0 15px;
 }
 .fa-credit-card{
     margin: 0;
 }
-.fa-circle-question{
-    cursor: pointer;
-}
+
 .fa-solid{
     margin-right: 10px;
     font-size: 22px;
     color: #aaa;
 }
 
-.description{
-    font-weight: bold;
-    padding: 3px 0;
-}
-.test{
-    padding: 3px 0;
-}
+
+
 .details img{
     width: 100%;
     height: auto;
