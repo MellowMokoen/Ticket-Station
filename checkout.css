@@ -24,6 +24,29 @@ body{
 .left p{
     padding: 30px 20px;
 }
+.methods{
+    padding: 10px 0;
+}
+.methods div{
+    padding: 7px 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.methods div:hover{
+    box-shadow: 0 0 10px rgba(172, 255, 47, 0.196);
+}
+.methods div:after{
+    content: '';
+    display: inline-block;
+    color: greenyellow;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    border-left-color: var(--fondy-success);
+    border-left: 10px;
+}
 
 .fa-credit-card{
     color: greenyellow;
