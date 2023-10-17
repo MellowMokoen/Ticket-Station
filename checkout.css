@@ -35,7 +35,7 @@ body{
 .methods div:hover{
     box-shadow: 0 0 10px rgba(172, 255, 47, 0.196);
 }
-.methods div:after{
+.methods div::after{
     content: '';
     display: inline-block;
     color: greenyellow;
@@ -47,7 +47,44 @@ body{
     border-left-color: var(--fondy-success);
     border-left: 10px;
 }
-
+.center img{
+    width: 250px;
+    height: auto;
+    margin: 0 15px;
+}
 .fa-credit-card{
-    color: greenyellow;
+    margin: 0;
+}
+.fa-circle-question{
+    cursor: pointer;
+}
+.fa-solid{
+    margin-right: 10px;
+    font-size: 22px;
+    color: #aaa;
+}
+
+.description{
+    font-weight: bold;
+    padding: 3px 0;
+}
+.test{
+    padding: 3px 0;
+}
+.details img{
+    width: 100%;
+    height: auto;
+}
+.center{
+    width: 50%;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    height: 70vh;
+}
+.center a{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
