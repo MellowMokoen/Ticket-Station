@@ -150,3 +150,11 @@ input{
 .cc-cvv{
     width: 60px;
 }
+.email input{
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 12px;
+    height: 50px;
+    margin-top: 10px;
+}
