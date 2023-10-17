@@ -17,6 +17,13 @@ body{
     border: 1px solid #ccc;
     border-radius: 7px;
 }
+.left{
+    width: 25%;
+    font-weight: bold;
+}
+.left p{
+    padding: 30px 20px;
+}
 
 .fa-credit-card{
     color: greenyellow;
