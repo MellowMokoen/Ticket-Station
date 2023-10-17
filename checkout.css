@@ -123,3 +123,9 @@ input{
     border-radius: 3px;
     outline: none;
 }
+.c-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0;
+}
