@@ -3,7 +3,7 @@ tColorB = document.getElementById('tColorB'),
 tColorC = document.getElementById('tColorC'),
 iconA = document.querySelector('.fa-credit-card'),
 iconB = document.querySelector('.fa-building-columns'),
-iconC = document.querySelector('.fa-credit-wallet'), 
+iconC = document.querySelector('.fa-wallet'), 
 cDetails = document.querySelector('.card-details');
 
 function methodA(){
@@ -24,4 +24,12 @@ function methodB(){
     iconC.style.color = "#aaa";
     cDetails.style.display = "none";
 }
-
+function methodC(){
+    tColorA.style.color = "#444" ;
+    tColorB.style.color = '#444';
+    tColorC.style.color = "greenyellow";
+    iconA.style.color = "#aaa";
+    iconB.style.color =  "#aaa";
+    iconC.style.color = "greenyellow";
+    cDetails.style.display = "none";
+}
