@@ -3,11 +3,15 @@
     color: #008cdd;
     font-weight: bold;
     font-family: var(--bs-body-font-family);
+    margin: 20px;
 }
 
-.fa-credit-card {
+.fa-credit-card  {
     margin-right: 12px;
+    font-size: larger;
 }
+
+
 
 img {
     margin: 20px;
@@ -17,8 +21,11 @@ img {
 
 input {
     background-color: rgb(248, 245, 240);
+    color: #034f7a;
+    font-size: larger;
+    font-weight: bold;
     padding: 10px 70px;
-    border: 2px solid #008cdd;
+    border: 1px solid #008cdd;
     border-radius: 7px 12px;
     box-shadow: 2px 4px #034f7a;
 }
