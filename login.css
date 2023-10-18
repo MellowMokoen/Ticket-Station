@@ -98,7 +98,10 @@
 
 .form-container a{
     color: #00588b;
-    font-size: 22px;
+    font-size: 12px;
+}
+.form-container a:hover{
+    text-decoration: underline;
 }
 
 .checkbox label{
@@ -120,4 +123,17 @@
     font-size: 12px;
     text-align: center;
     margin-top: 30px;
+}
+.option-field{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.checkbox{
+    
+    display: flex;
+    white-space: nowrap;
+    column-gap: 8px;
 }
