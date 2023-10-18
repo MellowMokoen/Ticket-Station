@@ -28,3 +28,8 @@ loginBtn.addEventListener("click", (e) => {
     e.preventDefault();
     formContainer.classList.remove("active");
 })
+
+document.getElementById("btn").onclick = function redirectFunction(){
+    location.href = "ticket.html";
+};
+        
