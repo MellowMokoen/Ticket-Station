@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-    <!--Link to CSS-->
-    <link rel="stylesheet" href="checkout.css">
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="author" content="SemiColonWeb" />
+    <meta
+      name="description"
+      content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today."
+    />
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Core Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="css/font-icons.css" />
+
+    <!-- Niche Demos -->
+    <link rel="stylesheet" href="demos/conference/conference.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Document Title
+	============================================= -->
+    <title>Check Out</title>
+    <link rel="stylesheet" href="checkout.css" />
     <!--Link to Font awesome-->
     <script
       src="https://kit.fontawesome.com/a95ab3e3ec.js"
@@ -20,10 +48,9 @@
             <hr style="border: 1px solid #ccc; margin: 0 15px;">
             <div class="methods">
                 <div onclick="methodA()" id="tColorA" style="color: greenyellow;"><i class="fa-solid fa-credit-card" style="color: greenyellow;"></i>Payment by card</div>
-            
-                <div onclick="methodB()" id="tColorB"><i class="fa-solid fa-building-columns"></i>Internet banks</div>
-                <div onclick="methodC()" id="tColorC"><i class="fa-solid fa-wallet"></i>Apple/Google Pay</div>
             </div>
+            <div onclick="methodB()" id="tColorB"><i class="fa-solid fa-building-columns"></i>Internet banks</div>
+            <div onclick="methodC()" id="tColorC"><i class="fa-solid fa-wallet"></i>Apple/Google Pay</div>
             <hr style="border: 1px solid #ccc; margin: 0 15px;">
         </div>
     </div>
@@ -41,38 +68,49 @@
                 </div>
                 <div class="c-details">
                     <div>
-                        <p>Expiry date</p>
-                        <input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
+                      <div class="commands">Expiry date</div>
+                      <input
+                        id="e-date"
+                        class="cc-exp"
+                        placeholder="MM/YY"
+                        required
+                        maxlength="5"
+                        required
+                      />
                     </div>
                     <div>
-                        <p>CVV</p>
-                        <div class="cvv-box" id="cvv-box"> 
-                            <input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3" required>
-                            <i class="fa-solid fa-circle-question" title="3 digits on the back of the card" style="cursor: pointer;"></i>
-
-                        </div>
+                      <div class="commands">CVV</div>
+                      <div class="cvv-box" id="cvv-box">
+                        <input
+                          id="cvv"
+                          class="cc-cvv"
+                          placeholder="CVV"
+                          required
+                          maxlength="3"
+                          required
+                        />
+                        <i
+                          class="fa-solid fa-circle-question"
+                          title="3 digits on the back of the card"
+                          style="cursor: pointer"
+                        ></i>
+                      </div>
                     </div>
-                </div>
-                <div class="email">
-                    <p>Email</p>
-                    <input type="email" placeholder="example@email.com" id="email" required>
-                </div>
-                <button>PAY NOW</button>
-            </form>
+                  </div>
+                  <div class="email">
+                    <div class="commands">Enter email address</div>
+                    <input type="email" id="email" required />
+                  </div>
+                  <button class="pay-btn">PAY NOW</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
+      </header>
     </div>
-    <div class="right">
-        <p>Order Information</p>
-        <hr style="border: 1px solid #ccc; margin: 0 15px;">
-    
-        <div class="details">
-            <div style="font-weight: bold; padding: 3px 0;">Order description</div>
-            <div style="padding: 3px 0;">Test payment</div>
-            <hr style="border: 1px solid #ccc; margin: 0 15px;">
-            <a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="demos/business/images/credit-card.png"></a>
-        </div>
-    </div>
+
     <!--Link to JS-->
     <script src="checkout.js"></script>
-</body>
+  </body>
 </html>
