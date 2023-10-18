@@ -89,5 +89,12 @@ cvv.addEventListener('keyup',function(e){
 let paymentButton = document.getElementById("paymentButton");
 
 paymentButton.addEventListener("click" , function() {
-    alert("You have successfully purchased your ticket(s)")
+    var clickedBtn=confirm("You have successfully purchased your ticket(s)")
+    
+    if (clickedBtn==true) {
+    //pressed ok. Redirect to payment confirmation
+    window.location.href = "payment.html";
+    } else {
+    //pressed cancel, stay on payment page
+    }
 });
