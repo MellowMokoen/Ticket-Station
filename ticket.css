@@ -15,7 +15,9 @@ header .shopping span{
     left: 80%;
     padding: 3px 10px;
 }
-.list {
+
+.listCart {
+    color: #1c1f25;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
@@ -24,6 +26,7 @@ header .shopping span{
 }
 
 .cart{
+    
     position: fixed;
     top: 0;
     left: 100%;
