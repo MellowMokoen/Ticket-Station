@@ -85,3 +85,9 @@ cvv.addEventListener('keyup',function(e){
         cvvBox.style.border="1px solid greenyellow";
     }
 })
+
+let paymentButton = document.getElementById("paymentButton");
+
+paymentButton.addEventListener("click" , function() {
+    alert("You have successfully purchased your ticket(s)")
+});
