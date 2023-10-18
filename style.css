@@ -211,6 +211,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -338,6 +340,15 @@ ul .new-menu  {
   font-size: large;
 }
 
+.added-menu li a {
+  color: #008cdd;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.added-menu li a:hover {
+  color: white;
+}
 .new-menu a {
   color: #008cdd;
   font-weight: bold;

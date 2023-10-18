@@ -1,115 +1,93 @@
-// Function to update the ticket price based on the selected number of people
-function updatePrice(selectElement, priceElement, basePrice) {
-  let priceUnit = priceElement.querySelector('.price-unit').textContent;
+class TicketUpdater {
+    constructor(selectElement, priceElement, basePrice) {
+        this.selectElement = selectElement;
+        this.priceElement = priceElement;
+        this.basePrice = basePrice;
+        this.priceUnit = priceElement.querySelector('.price-unit').textContent;
 
-  selectElement.addEventListener('change', function () {
-    let selectedValue = parseInt(selectElement.value);
-    let price = selectedValue * basePrice;
-    priceElement.textContent = `${priceUnit}${price}`;
-  });
+        this.selectElement.addEventListener('change', this.updatePrice.bind(this));
+    }
+
+    updatePrice() {
+        const selectedValue = parseInt(this.selectElement.value);
+        const price = selectedValue * this.basePrice;
+        this.priceElement.textContent = `${this.priceUnit}${price}`;
+    }
 }
 
-// Add event listeners to each select element using forEach loop
-let selectElements = document.querySelectorAll('.pricing-persons select');
-let priceElements = document.querySelectorAll('.pricing-price');
-let basePrices = [450, 280, 600];
+class ShoppingCart {
+    constructor(openShopping, closeShopping, listCart, body, total, quantity) {
+        this.openShopping = openShopping;
+        this.closeShopping = closeShopping;
+        this.listCart = listCart;
+        this.body = body;
+        this.total = total;
+        this.quantity = quantity;
+        this.cartItems = [];
 
-selectElements.forEach((selectElement, index) => {
-  updatePrice(selectElement, priceElements[index], basePrices[index]);
-});
+        this.openShopping.addEventListener('click', () => this.body.classList.add('active'));
+        this.closeShopping.addEventListener('click', () => this.body.classList.remove('active'));
+    }
+
+    addToCart(event, priceElement, selectElement) {
+        event.preventDefault();
+        const pricingBox = event.target.closest('.pricing-box');
+        const eventName = pricingBox.querySelector('.pricing-title h3').textContent;
+        const price = parseFloat(pricingBox.querySelector('.pricing-price span.price-unit').textContent + pricingBox.querySelector('.pricing-price').textContent.trim());
+        const quantity = parseInt(selectElement.value);
+
+        const cartItem = `${eventName} - ${quantity} x ${price}`;
+        this.cartItems.push(cartItem);
+
+        this.updateCart();
+        this.quantity.textContent = parseInt(this.quantity.textContent) + quantity;
+    }
+
+    updateCart() {
+        this.listCart.innerHTML = '';
+        this.cartItems.forEach(item => {
+            const cartItem = document.createElement('li');
+            cartItem.textContent = item;
+            this.listCart.appendChild(cartItem);
+        });
+
+        this.updateTotal();
+    }
+
+    updateTotal() {
+        let totalAmount = 0;
+
+        this.cartItems.forEach(item => {
+            const parts = item.split(' x ');
+            const itemPrice = parseFloat(parts[1]);
+            const itemQuantity = parseInt(parts[0].split(' - ')[1]);
+            totalAmount += itemPrice * itemQuantity;
+        });
+
+        this.total.innerText = `Total: R${totalAmount.toFixed(2)}`;
+    }
+}
+
+// Initialize ticket updates
+const selectElements = document.querySelectorAll('.pricing-persons select');
+const priceElements = document.querySelectorAll('.pricing-price');
+const basePrices = [450, 280, 600];
+
+let ticketUpdaters = Array.from(selectElements).map((selectElement, index) => new TicketUpdater(selectElement, priceElements[index], basePrices[index]));
 
 
-
-
-//Cart program
+// Initialize the shopping cart
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
-let list = document.querySelector('.list');
 let listCart = document.querySelector('.listCart');
 let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-openShopping.addEventListener('click', ()=>{
-    body.classList.add('active');
-})
-closeShopping.addEventListener('click', ()=>{
-    body.classList.remove('active');
-})
- 
-let products = [
-  {
-      id: 1,
-      name: 'Conference & Seminar',
-     
-      price: 0
-  },
-  {
-      id: 2,
-      name: 'Product Launch',
-      
-      price: 450
-  },
-  {
-      id: 3,
-      name: 'Team Building',
-      price: 280
-  },
-  
-  {
-      id: 4,
-      name: 'Trade Shows & Exhibitions',
-      
-      price: 600
-  },
-];
+let shoppingCart = new ShoppingCart(openShopping, closeShopping, listCart, body, total, quantity);
 
-
-function addToCart(key){
-    if(lisCards[key] == null){
-        lisCards[key] = JSON.parse(JSON.stringify(products[key]));
-        lisCards[key].quantity = 1;
-    }
-    reloadCard();
-}
-
-
-function reloadCard(){
-  listCart.innerHTML = '';
-  const selectedValue = parseInt(selectElement.value);
-  const priceUnit = priceElement.querySelector('.price-unit').textContent;
-  let count = 0;
-  let totalPrice = 0;
-  listCards.forEach((value, key) => {
-      count = count + selectedValue.quantity;
-   totalPrice = totalPrice + value.price;
-     
-      if(value != null){
-          let newDiv = document.createElement('li');
-          newDiv.innerHTML = `
-              
-              <div>${value.name}</div>
-              <div>${value.price.toLocaleString()}</div>
-              
-              <div>
-                  <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
-                  <div class="count">${value.quantity}</div>
-                  <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
-              </div>
-          `;
-          listCart.appendChild(newDiv);
-      }
-  })
-  total.innerText = 'R ' +totalPrice.toLocaleString()+'.00';
-  quantity.innerText = count;
-}
-
-function changeQuantity(key, quantity){
-  if(quantity == 0){
-      delete lisCards[key];
-  }else{
-      lisCards[key].quantity = quantity;
-      lisCards[key].price = quantity * products[key].price;
-  }
-  reloadCard();
-}
+// Add event listeners to ticket buttons
+let ticketButtons = document.querySelectorAll('.pricing-action a.button');
+ticketButtons.forEach(button => {
+    button.addEventListener('click', (event) => shoppingCart.addToCart(event, priceElements[0], selectElements[0]));
+});
