@@ -2,7 +2,18 @@ const loginButton = document.getElementById("loginButton");
 const signupLink = document.getElementById("signup");
 const emailInput = document.querySelector('input[type="email"]');
 const passwordInput = document.querySelector('input[type="password"]');
+const signupBtn = document.querySelector("#signup");
+const loginBtn = document.querySelector("#login");
+const form_container=document.querySelector(".form-container");
 
+signupBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  form_container.classList.add("active");
+})
+loginBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  form_container.classList.remove("active");
+})
 loginButton.addEventListener("click", function() {
   const emailValue = emailInput.value.trim();
   const passwordValue = passwordInput.value.trim();
