@@ -90,3 +90,10 @@ const ticketButtons = document.querySelectorAll('.pricing-action a.button');
 ticketButtons.forEach(button => {
     button.addEventListener('click', event => shoppingCart.addToCart(event, button.closest('.pricing-box')));
 });
+
+const totalButton = document.querySelector('.total');
+
+totalButton.addEventListener('click', function() {
+    window.location.href = 'checkout.html'; // Replace '/your-local-path' with the actual path you want to redirect to.
+});
+
