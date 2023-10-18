@@ -338,6 +338,15 @@ ul .new-menu  {
   font-size: large;
 }
 
+.added-menu li a {
+  color: #008cdd;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.added-menu li a:hover {
+  color: white;
+}
 .new-menu a {
   color: #008cdd;
   font-weight: bold;
