@@ -850,6 +850,12 @@ progress {
   margin-top: var(--bs-gutter-y);
 }
 
+#reference {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #008cdd;
+}
+
 .col {
   flex: 1 0 0%;
 }
