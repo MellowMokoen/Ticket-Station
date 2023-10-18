@@ -1,35 +1,28 @@
-const formOpenBtn = document.querySelector("#form-open"), 
-home = document.querySelector(".container"),
-formContainer = document.querySelector(".form-container"),
-formCloseBtn = document.querySelector(".form-close"),
-signupBtn = document.querySelector("#signup"),
-loginBtn = document.querySelector("#login"),
-pwShowwHide = document.querySelectorAll(".pw-hide");
+const loginButton = document.getElementById("loginButton");
+const signupLink = document.getElementById("signup");
+const emailInput = document.querySelector('input[type="email"]');
+const passwordInput = document.querySelector('input[type="password"]');
 
-pwShowwHide.forEach((icon) => {
-    icon.addEventListener("click", () => {
-        let getPwInput = icon.parentElement.querySelector("input");
-        if(getPwInput.type === "password") {
-            getPwInput.type = "text";
-            icon.classList.replace("fa-eye-slash", "fa-eye")
-        }else{
-            getPwInput.type = "password";
-            icon.classList.replace("fa-eye", "fa-eye-slash")
-        };
-        console.log(getPwInput);
-    })
+loginButton.addEventListener("click", function() {
+  const emailValue = emailInput.value.trim();
+  const passwordValue = passwordInput.value.trim();
 
-})
-signupBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    formContainer.classList.add("active");
+  if (emailValue === "" || passwordValue === "") {
+    alert("Please fill in both email and password fields.");
+  } else {
+    // Perform your login action here
+    // For demonstration purposes, let's simulate a delay before redirection
+    setTimeout(function() {
+      redirectToLocalPath("ticket.html"); // Replace with the local path
+    }, 1000); // This waits for 1 second (1000 milliseconds) before redirecting
+  }
 });
-loginBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    formContainer.classList.remove("active");
-})
 
-document.getElementById("btn").onclick = function redirectFunction(){
-    location.href = "ticket.html";
-};
-        
+signupLink.addEventListener("click", function(event) {
+  event.preventDefault();
+  // You can add code to handle the signup process or redirect to the signup page
+});
+
+function redirectToLocalPath(path) {
+  location.href = path; // Use the local path here
+}
