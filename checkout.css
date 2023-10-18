@@ -27,14 +27,14 @@ input {
     padding: 10px 70px;
     border: 1px solid #008cdd;
     border-radius: 7px 12px;
-    box-shadow: 2px 4px #034f7a;
+    box-shadow: 2px 4px black;
 }
 
 .commands {
     margin-top: 50px;
     margin-bottom: 10px;
-    color: #0079bf;
-    font-size: large;
+    color: white;
+    font-size: larger;
     font-family: var(--bs-body-font-family);
     font-weight: bold;
 }

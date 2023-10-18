@@ -39,6 +39,21 @@
       src="https://kit.fontawesome.com/a95ab3e3ec.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("demos/conference/images/businessman.jpg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        padding: 50px;
+      }
+    </style>
   </head>
 
   <body class="stretched">
@@ -53,65 +68,62 @@
         data-sticky-shrink="false"
       >
         <div id="header-wrap">
-          <div class="container">
-            <div class="header-row justify-content-lg-between">
-              <!-- Logo
+          <div class="header-row justify-content-lg-evenly">
+            <!-- Logo
 						============================================= -->
-              <div id="logo" class="me-lg-0">
-                <a href="demo-conference.html" data-scrollto="#slider">
-                  <img
-                    class="logo-default"
-                    srcset="
-                      demos/conference/images/new-logo.jpg,
-                      demos/conference/images/new-logo.jpg 2x
-                    "
-                    src="demos/conference/images/new-logo.jpg"
-                    alt="Eagle-Tech Logo"
-                  />
-                  <img
-                    class="logo-dark"
-                    srcset="
-                      demos/conference/images/new-logo.jpg,
-                      demos/conference/images/new-logo.jpg 2x
-                    "
-                    src="demos/conference/images/new-logo.jpg"
-                    alt="Eagle-Tech Logo"
-                  />
-                </a>
-              </div>
-              <!-- #logo end -->
-              <!-- Primary Navigation
-						============================================= -->
-              <ul class="nav justify-content-end added-menu">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="demo-conference.html"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="demo-conference.html#section-about"
-                    >About</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="demo-conference.html#section-location"
-                    >Location</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="ticket.html">Tickets</a>
-                </li>
-              </ul>
-
-              <!-- #primary-menu end -->
+            <div id="logo" class="me-lg-0">
+              <a href="demo-conference.html" data-scrollto="#slider">
+                <img
+                  class="logo-default"
+                  srcset="
+                    demos/conference/images/new-logo.jpg,
+                    demos/conference/images/new-logo.jpg 2x
+                  "
+                  src="demos/conference/images/new-logo.jpg"
+                  alt="Eagle-Tech Logo"
+                />
+                <img
+                  class="logo-dark"
+                  srcset="
+                    demos/conference/images/new-logo.jpg,
+                    demos/conference/images/new-logo.jpg 2x
+                  "
+                  src="demos/conference/images/new-logo.jpg"
+                  alt="Eagle-Tech Logo"
+                />
+              </a>
             </div>
-            <hr />
-            <div class="payment-method">Payment Method</div>
+            <!-- #logo end -->
+            <!-- Primary Navigation
+						============================================= -->
+            <ul class="nav justify-content-end added-menu">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="demo-conference.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="demo-conference.html#section-about"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="demo-conference.html#section-location"
+                  >Location</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ticket.html">Tickets</a>
+              </li>
+            </ul>
+
+            <!-- #primary-menu end -->
+          </div>
+          <hr />
+          <div class="container">
             <div class="" id="tColorA" style="color: greenyellow">
               <i class="fa-solid fa-credit-card" style="color: greenyellow"></i
               >Payment by card
